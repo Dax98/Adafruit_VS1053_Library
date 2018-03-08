@@ -162,6 +162,7 @@ uint16_t saveRecordedData(boolean isrecord) {
           recording.flush();
           addr = 0;
       }
+      addr += 2;
     }
     if (addr != 0) {
       if (!recording.write(recording_buffer, addr)) {
